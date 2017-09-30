@@ -21,4 +21,5 @@ from ats import views as core_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/$', core_views.index, name='index'),
+    url(r'$',core_views.base,name="base"),
 ]
