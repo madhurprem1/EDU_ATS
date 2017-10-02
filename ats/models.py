@@ -6,3 +6,7 @@ from django.db import models
 # Create your models here.
 class index():
 	pass
+class login():
+	pass	
+class about():
+	pass	

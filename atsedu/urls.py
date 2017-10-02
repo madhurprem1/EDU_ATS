@@ -17,9 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import include, url
 from ats import views as core_views
+# from django.contrib.auth import views as auth_views
+# from ats import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/$', core_views.index, name='index'),
-    url(r'$',core_views.base,name="base"),
+    # url(r'^index/$', core_views.index, name='index'),
+    # url(r'$',core_views.index,name="index"),
+    # url(r'^about/$',core_views.about,name="about"),
+    # url(r'^login/$', core_views.login,name="login"),
+    # url(r'^login/$','django.contrib.auth.views.login', {'template_name': 'login.html'}),
+    # url(r'^logout/$','django.contrib.auth.views.logout', {'next_page': '/login/'}),
+    url(r'^$', core_views.index, name='index'),
+    url(r'^about/$',core_views.about,name="about"),
+    url(r'^contact/$',core_views.contact,name="contact"),
 ]

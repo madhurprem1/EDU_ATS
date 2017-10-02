@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
-<title>         {% block title %}ATS Academy Ghaziabad{% endblock %}
+<title>         
+  {% block title %}
+  ATS Govindpuram
+  {% endblock %}
 </title>
 <head>
-   {% load staticfiles %}
-<meta charset="utf-8">
+  
+{% load staticfiles %} 
+
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
@@ -13,8 +18,8 @@
   
 </head>  
 <body>
-{% block content %}
-{% load staticfiles %}
+
+<!-- {% load staticfiles %} -->
 <!-- <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -32,16 +37,16 @@
     </ul>
   </div>
 </nav> -->
-<div class="navbar navbar-inverse navbar-static-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
  
  <div class="container">
  
- <a href="#" class="navbar-brand">Mr. M.'s Sticky Footer Example </a> <button class="navbar-toggle"
+ <a href="/" class="navbar-brand">ATS Education Govindpuram </a> <button class="navbar-toggle"
       data-toggle="collapse" data-target=".navHeaderCollapse"></button>
 
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="base">Home</a></li>
 
           <li><a href="#">Blog</a></li>
 
@@ -59,12 +64,12 @@
             </ul>
           </li>
 
-          <li><a href="#">About</a></li>
+          <li><a href="/about">About</a></li>
 
-          <li><a href="#">Contact</a></li>
+          <li><a href="/contact">Contact</a></li>
 
          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+         <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
    
         </ul>
 
@@ -76,36 +81,8 @@
   <h2>ATS EDUCATION GHAZIABAD</h2>
   <p>Use the navbar-btn class on a button to vertically align (same padding as links) it inside the navbar.</p>
 </div> -->
-<div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="{% static 'img/first.jpg' %}" style="width:70%">
-  
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="{% static 'img/second.jpg' %}" style="width:60%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="{% static 'img/third.jpg' %}" style="width:70%">
-  <div class="text">Caption Three</div>
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-<script src="{% static 'js/style.js' %}"></script>
+{% block content %}
   {% endblock %}
 </body>
 
