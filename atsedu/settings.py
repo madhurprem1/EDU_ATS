@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ats',
+    'send_email',
+ 
 ]
+
+MAPS_API_KEY ='AIzaSyCoFMQSJHzZvOOvO4uwwcH9jNiVHtuI5lg'
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -82,6 +88,16 @@ DATABASES = {
     }
 }
 
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = 'smp0005@gmail.com'
+EMAIL_HOST_PASSWORD = 'maximum1418'
+EMAIL_PORT = 587
+# DEFAULT_FROM_EMAIL = 'TestSite Team<smp006@hotmail.com>'
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -123,4 +139,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'statticfiles'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-LOGIN_REDIRECT_URL = 'base'
+LOGIN_REDIRECT_URL = '/'

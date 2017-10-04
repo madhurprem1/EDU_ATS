@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block scripts %}
+{{ block.super }}
+<script src="{% static 'js/style.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{% endblock scripts %}
+{% block content %}
+<h2>Hello</h2>
+<style>
+body  {
+    
+    background-color: #cccccc;
+}
+</style>
+<div class="col-sm-12 " align="center">
+
+  <form method="post">
+    <!-- <table class="table" > -->
+    <div class="form-group">
+      <h2>Sign up</h2>
+    {% csrf_token %}
+    {% for field in form %}
+     
+     
+      <div class=" control-label col-sm-4" align="right">
+       <label>{{ field.label_tag }}</label>
+      </div>
+         <div class="col-sm-8" align="left">
+
+       <label >{{ field }}</label><br>
+         </div>
+
+     
+        <!-- {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %} -->
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+     
+    {% endfor %}
+    </div>
+    <!-- </table> -->
+    <button type="  submit" class="btn success">Sign up</button>
+  </form>
+</div> 
+{% endblock %}

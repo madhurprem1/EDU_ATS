@@ -9,6 +9,14 @@ body {font-family: Verdana,sans-serif;}
   margin: auto;
 }
 
+.location_picker_map {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 2px;
+  display: inline-block;
+}
+
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -66,3 +74,15 @@ body {font-family: Verdana,sans-serif;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+

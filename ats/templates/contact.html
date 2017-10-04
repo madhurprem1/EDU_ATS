@@ -7,6 +7,7 @@
 {{ block.super }}
 <script src="{% static 'js/style.js' %}"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   {% endblock scripts %}
@@ -16,5 +17,14 @@
 	
 </div>
  <h2>About Us</h2>
- <h4>hellooooooooooooooo Contact</h4>
+<div class="container col-sm-12 text-center">
+  <h1>Contact Us</h1>
+
+    <form role="form" action="" method="post" class="form-horizontal">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>
+
 {% endblock %}
