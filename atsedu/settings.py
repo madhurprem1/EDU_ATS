@@ -88,10 +88,8 @@ DATABASES = {
     }
 }
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-
 EMAIL_HOST_USER = 'smp0005@gmail.com'
 EMAIL_HOST_PASSWORD = 'maximum1418'
 EMAIL_PORT = 587
