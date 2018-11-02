@@ -1,6 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView, FormView
+from django.core.mail import send_mail, BadHeaderError
 from .forms import ContactForm
 from django.contrib import messages
 
@@ -36,7 +37,7 @@ class ContactView(FormView):
                 from_email = form.cleaned_data['from_email']
                 message = form.cleaned_data['message']
                 try:
-                    # send_mail(subject, message, from_email, ['madhurprem1@gmail.com'])
+                    send_mail(subject, message, from_email, ['madhurprem1@gmail.com'])
                     # return HttpResponse('/thanks/')
                     messages.success(request, 'Email Sent Successfully', extra_tags='alert')
                 except BadHeaderError:
