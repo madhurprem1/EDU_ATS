@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block scripts %}
+{{ block.super }}
+<script src="{% static 'js/style.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+{% endblock scripts %}
+{% block content %}
+
+</br></br></br></br>
+<style>
+body  {
+    
+    background-color: #cccccc;
+}
+</style>
+<div class="container col-sm-12",>
+
+	<div class="col-sm-6" align="left">
+		
+		<div>
+           	<dl>
+                 <dt>1: Raj Nagar Branch: </dt>
+                 <dd>BS-02, Sundram Ansal Tower, RDC, Behind Gaur Central Mall, Raj Nagar, Ghaziabad, UP.</dd>
+			     <dt>2: Govindpuram Branch: </dt>
+                 <dd></dd>H-500, Govindpuram, Ghaziabad, UP.</dd>
+                 </br>
+                 <dt>Contact:</dt> <dd>986-856-8872</dd>
+			 </dl>
+		</div>
+		<form role="form" action="" method="POST"  class="form-horizontal">
+		    {% csrf_token %}
+		    {{ form.as_p }}
+			<input type="submit" value="Submit" align="right">
+		   
+		</form>
+
+		
+	</div>
+<div class="col-sm-6">
+	<iframe
+	  width="600"
+	  height="450"
+	  frameborder="0" style="border:0"
+	  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCoFMQSJHzZvOOvO4uwwcH9jNiVHtuI5lg
+	    &q=BS-02, Sundram Ansal Tower, RDC, Behind Gaur Central Mall,Raj Nager,Seattle+Ghaziabad," allowfullscreen>
+	</iframe>
+</div>
+
+</div>
+
+{% endblock %}

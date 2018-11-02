@@ -1,0 +1,19 @@
+from django.conf.urls import url
+from django.urls import path
+
+# from django.views.generic import HomeView
+from ats_edu.views import IndexView, AboutView, ContactView
+
+from . import views
+
+app_name='ats_edu'
+urlpatterns = [
+    path(r'',  IndexView.as_view()),
+    path(r'about/',  AboutView.as_view()),
+    path(r'contact/',  ContactView.as_view()),
+    # path(r'contact/email',  ContactView.as_view()),
+    # path(r'thanks/',  ContactView.as_view()),
+    # url(r'blog/', 'blog.views.hello'),
+
+]
+

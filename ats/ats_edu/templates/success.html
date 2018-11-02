@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block scripts %}
+{{ block.super }}
+<script src="{% static 'js/style.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+{% endblock scripts %}
+{% block content %}
+
+</br></br></br></br>
+<style>
+body  {
+    
+    background-color: #cccccc;
+}
+</style>
+<div class="container col-sm-12",>
+
+<h1>Success! Email sent.</h1>
+
+<h1>ATS</h1>
+</div>
+
+{% endblock %}
